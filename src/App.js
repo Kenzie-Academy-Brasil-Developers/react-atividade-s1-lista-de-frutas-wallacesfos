@@ -9,11 +9,12 @@ function App() {
     { name: "strawberry", color: "red", price: 4 },
   ]);
 
-  const deleteProduto = () =>  setFruits(fruits.filter((fruits) => (fruits.color === 'red')))
+  const deleteProduto = () => setFruits(fruits.filter((fruits) => (fruits.color === 'red')))
 
   return (
     <div className="App">
       <header className="App-header">
+        <h2>Total price: {fruits.reduce((a,b) => a + b.price, 0)}</h2>
         <ul>
           {fruits.map((item) => {return <li className="ahadois">{item.name}</li>})}
         </ul>
